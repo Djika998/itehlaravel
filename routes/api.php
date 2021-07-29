@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\TrainerController;
+use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::apiResource('trainings', TrainingController::class);
+Route::apiResource('trainers', TrainerController::class);
+Route::apiResource('users', UserController::class);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+  return $request->user();
 });
