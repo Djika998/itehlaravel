@@ -2,16 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\Trainer;
+use App\Models\Training;
 use Illuminate\Database\Seeder;
 
-class TrainerSeeder extends Seeder {
+class TrainingSeeder extends Seeder {
   /**
    * Run the database seeds.
    *
    * @return void
    */
   public function run() {
-    Trainer::factory()->count(1)->hasTrainings(2)->create();
   }
 }
